@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Health Data Analyzer</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>
+            <i class="fa-solid fa-heart-pulse"></i>
+            Parallel Health Data Analyzer
+        </h1>
+
+        <p>
+            IFB206 - Parallel Computing Project
+        </p>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="info-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            Project Overview
+        </h2>
+
+        <p>
+            Parallel Health Data Analyzer merupakan aplikasi analisis data kesehatan
+            yang menerapkan konsep komputasi paralel menggunakan Python Multiprocessing.
+            Sistem memproses dataset pasien dengan membagi data ke beberapa process
+            yang berjalan secara bersamaan.
+        </p>
+
+        <p>
+            Pendekatan ini memungkinkan proses analisis dilakukan lebih cepat
+            dibandingkan pemrosesan secara sekuensial.
+        </p>
+
+    </section>
+
+    <!-- CONCEPT -->
+    <section class="info-card">
+
+        <h2>
+            <i class="fa-solid fa-microchip"></i>
+            Parallel Computing Concepts
+        </h2>
+
+        <ul>
+            <li>
+                <b>Data Parallelism</b> :
+                Dataset dibagi menjadi beberapa bagian yang diproses secara paralel.
+            </li>
+
+            <li>
+                <b>Multiprocessing</b> :
+                Menggunakan beberapa process untuk mempercepat komputasi.
+            </li>
+
+            <li>
+                <b>Workload Distribution</b> :
+                Beban kerja dibagi secara merata ke seluruh process.
+            </li>
+
+            <li>
+                <b>Concurrent Execution</b> :
+                Semua process berjalan bersamaan untuk meningkatkan performa.
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- WORKFLOW -->
+    <section class="info-card">
+
+        <h2>
+            <i class="fa-solid fa-diagram-project"></i>
+            System Workflow
+        </h2>
+
+<pre class="workflow">
+Patient Dataset (1000 Records)
+            |
+            v
+       Split Dataset
+            |
+   ---------------------
+   |    |    |    |
+  P1   P2   P3   P4
+   |    |    |    |
+   Local Analysis
+   |    |    |    |
+   ----------------
+            |
+      Merge Results
+            |
+      Final Report
+</pre>
+
+    </section>
+
+    <!-- DATASET -->
+    <section class="info-card">
+
+        <h2>
+            <i class="fa-solid fa-database"></i>
+            Dataset Information
+        </h2>
+
+        <p>
+            Dataset berisi 1000 data pasien yang digunakan untuk simulasi
+            analisis kesehatan.
+        </p>
+
+        <ul>
+            <li><b>Age</b> : Usia pasien</li>
+            <li><b>BMI</b> : Body Mass Index</li>
+            <li><b>Diabetes</b> : Status diabetes pasien</li>
+            <li><b>Hypertension</b> : Status hipertensi pasien</li>
+        </ul>
+
+    </section>
+
+    <!-- RESULT -->
+    <section class="result-card">
+
+        <h2>
+            <i class="fa-solid fa-chart-column"></i>
+            Analysis Result
+        </h2>
+
+        <pre>{{ output }}</pre>
+
+    </section>
+
+    <!-- OUTPUT EXPLANATION -->
+    <section class="info-card">
+
+        <h2>
+            <i class="fa-solid fa-file-lines"></i>
+            Output Explanation
+        </h2>
+
+        <ul>
+            <li>
+                <b>Total Patients</b> :
+                Jumlah data pasien yang dianalisis.
+            </li>
+
+            <li>
+                <b>Average Age</b> :
+                Rata-rata usia seluruh pasien.
+            </li>
+
+            <li>
+                <b>Average BMI</b> :
+                Rata-rata indeks massa tubuh pasien.
+            </li>
+
+            <li>
+                <b>Diabetes Patients</b> :
+                Jumlah pasien yang memiliki diabetes.
+            </li>
+
+            <li>
+                <b>Hypertension Cases</b> :
+                Jumlah pasien yang mengalami hipertensi.
+            </li>
+
+            <li>
+                <b>Execution Time</b> :
+                Waktu yang dibutuhkan sistem untuk menyelesaikan analisis.
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="info-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-check"></i>
+            Conclusion
+        </h2>
+
+        <p>
+            Implementasi Python Multiprocessing berhasil menerapkan konsep
+            komputasi paralel melalui pembagian dataset menjadi beberapa bagian
+            yang diproses secara bersamaan.
+        </p>
+
+        <p>
+            Pendekatan Data Parallelism memungkinkan pemanfaatan sumber daya
+            CPU secara lebih optimal sehingga proses analisis menjadi lebih efisien.
+        </p>
+
+    </section>
+
+    <footer>
+        <i class="fa-solid fa-laptop-code"></i>
+        IFB206 - Parallel Computing Project
+    </footer>
+
+</div>
+
+</body>
+</html>
