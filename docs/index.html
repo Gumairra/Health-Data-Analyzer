@@ -6,10 +6,112 @@
     <title>Parallel Health Data Analyzer</title>
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <style>
+            *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Segoe UI',sans-serif;
+            background:#f5f7fb;
+            color:#333;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            padding:40px 0;
+        }
+
+        header{
+            text-align:center;
+            margin-bottom:40px;
+        }
+
+        header h1{
+            font-size:3rem;
+            color:#2563eb;
+        }
+
+        header h1 i{
+            margin-right:10px;
+        }
+
+        header p{
+            margin-top:10px;
+            color:#6b7280;
+        }
+
+        .info-card,
+        .result-card{
+            background:white;
+            padding:25px;
+            border-radius:16px;
+            margin-bottom:25px;
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+        }
+
+        .info-card h2,
+        .result-card h2{
+            color:#2563eb;
+            margin-bottom:15px;
+        }
+
+        .info-card h2 i,
+        .result-card h2 i{
+            margin-right:10px;
+        }
+
+        .info-card p{
+            line-height:1.8;
+            margin-bottom:10px;
+        }
+
+        .info-card ul{
+            padding-left:20px;
+        }
+
+        .info-card li{
+            margin-bottom:10px;
+            line-height:1.8;
+        }
+
+        .workflow{
+            background:#eef4ff;
+            color:#1f2937;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        .result-card pre{
+            background:#111827;
+            color:#22c55e;
+            padding:20px;
+            border-radius:12px;
+            overflow:auto;
+            line-height:1.8;
+        }
+
+        pre{
+            white-space:pre-wrap;
+        }
+
+        footer{
+            text-align:center;
+            margin-top:30px;
+            color:#6b7280;
+            padding-bottom:20px;
+        }
+
+        footer i{
+            margin-right:8px;
+        }
+    </style>
 </head>
 <body>
 
